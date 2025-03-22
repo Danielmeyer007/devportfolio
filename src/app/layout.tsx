@@ -27,21 +27,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-        >
+        {/* Video Background */}
+        <video autoPlay loop muted playsInline className="video-bg">
           <source src="/videos/blackholewallpaper.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
-        <div className="nebula"></div>
-        <div className="gas-cloud"></div>
-        <div className="gas-cloud"></div>
-        <div className="gas-cloud"></div>
-        {children}
+
+        {/* Main Content */}
+        <div className="content">{children}</div>
       </body>
     </html>
   );
