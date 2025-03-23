@@ -12,7 +12,7 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-4">
           <div className="relative w-12 h-12 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white">
             <Image
-              src="/images/my-picture.jpg" // Place your picture at public/images/my-picture.jpg
+              src="/src/app/images/danyxdev.jpg" // Place your picture at public/images/danyxdev.jpg
               alt="Daniel Meyer"
               fill
               className="object-cover"
@@ -22,26 +22,31 @@ const Header: React.FC = () => {
         </div>
         {/* Center: Navigation Menu */}
         <nav className="hidden md:flex space-x-8">
-          <Link href="/about">
-            <a className="text-white hover:text-gray-300 transition">
-              About Me
-            </a>
+          <Link
+            href="/about"
+            className="text-white hover:text-gray-300 transition"
+          >
+            About Me
           </Link>
-          <Link href="/skills">
-            <a className="text-white hover:text-gray-300 transition">Skills</a>
+          <Link
+            href="/skills"
+            className="text-white hover:text-gray-300 transition"
+          >
+            Skills
           </Link>
-          <Link href="/prototypes">
-            <a className="text-white hover:text-gray-300 transition">
-              Prototypes
-            </a>
+          <Link
+            href="/prototypes"
+            className="text-white hover:text-gray-300 transition"
+          >
+            Prototypes
           </Link>
         </nav>
         {/* Right: Hire Me Button & Mobile Menu */}
         <div className="flex items-center gap-4">
           <Link href="/hire-me">
-            <a className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow-lg hover:from-purple-600 hover:to-indigo-600 transition">
+            <div className="px-4 py-2 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold shadow-lg hover:from-purple-600 hover:to-indigo-600 transition">
               Hire Me
-            </a>
+            </div>
           </Link>
           <div className="md:hidden">
             <button className="text-white focus:outline-none">
