@@ -1,13 +1,12 @@
-// components/HeroSection.tsx
 import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 px-4 bg-black bg-opacity-70 backdrop-blur-sm">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+    <section className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-4 bg-black/30 rounded-xl max-w-4xl mx-auto">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow">
         Welcome to My Portfolio
       </h2>
-      <p className="text-lg max-w-2xl text-white">
+      <p className="text-lg max-w-2xl text-white drop-shadow-sm">
         I’m a passionate developer specializing in Web3, AI, and decentralized
         applications.
       </p>

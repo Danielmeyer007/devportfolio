@@ -36,10 +36,10 @@ const Header: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href="/roadmap"
+                    href="/Projects"
                     className="text-white/70 hover:text-white transition"
                   >
-                    DNX Road Map
+                    Projects Samples
                   </Link>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
                     href="/contact"
                     className="text-white/70 hover:text-white transition"
                   >
-                    Contact Us
+                    Contact Me
                   </Link>
                 </li>
               </ul>
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
                 <div className="absolute inset-0 rounded-lg border border-black/40 [mask-image:linear-gradient(to_top,black,transparent)]"></div>
                 <div className="absolute inset-0 rounded-lg shadow-[0_0_10px_rgb(140,69,255,0.7)_inset]"></div>
               </div>
-              <span className="relative text-white">Connect Wallet</span>
+              <span className="relative text-white">Hire Me</span>
             </button>
             <div className="md:hidden">
               <svg
