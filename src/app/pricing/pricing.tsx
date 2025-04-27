@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Header from "../sections/header";
+import Header from "../sections/header"; // Importing the Header component
 import { motion } from "framer-motion";
 
 const services = [
