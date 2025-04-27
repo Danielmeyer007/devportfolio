@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
         applications.
       </p>
       <a
-        href="#contact"
+        href="/contact"
         className="mt-6 bg-white text-black px-6 py-3 rounded-full font-semibold text-lg hover:bg-gray-300 transition"
       >
         Contact Me

@@ -12,11 +12,17 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-4">
             <div className="relative w-10 h-10 md:w-14 md:h-14">
               {/* Núcleo central */}
-              <div className="w-full h-full rounded-full bg-black flex items-center justify-center shadow-[0_0_30px_rgba(100,100,255,0.8)]">
+              <Link
+                href="/"
+                className="w-full h-full rounded-full bg-black flex items-center justify-center shadow-[0_0_30px_rgba(100,100,255,0.8)]"
+                onClick={() => {
+                  window.location.href = "/";
+                }}
+              >
                 <span className="text-white font-bold text-xs md:text-base">
                   DANYX
                 </span>
-              </div>
+              </Link>
               {/* Resplandor pulsante */}
               <div className="absolute -inset-[2px] rounded-full border border-purple-500 opacity-50 animate-pulse"></div>
             </div>
@@ -36,10 +42,10 @@ const Header: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href="/Projects"
+                    href="/projectsamples"
                     className="text-white/70 hover:text-white transition"
                   >
-                    Projects Samples
+                    Project Samples
                   </Link>
                 </li>
                 <li>
