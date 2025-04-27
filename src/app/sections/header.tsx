@@ -14,7 +14,7 @@ const Header: React.FC = () => {
               {/* Núcleo central */}
               <div className="w-full h-full rounded-full bg-black flex items-center justify-center shadow-[0_0_30px_rgba(100,100,255,0.8)]">
                 <span className="text-white font-bold text-xs md:text-base">
-                  DNX
+                  DANYX
                 </span>
               </div>
               {/* Resplandor pulsante */}
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                     href="/about"
                     className="text-white/70 hover:text-white transition"
                   >
-                    About DNX
+                    About Danyx
                   </Link>
                 </li>
                 <li>

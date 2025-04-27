@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import Header from "./header";
-import HeroSection from "./HeroSection";
+import Header from "./sections/header";
+import HeroSection from "./sections/HeroSection";
 
 import "./globals.css";
 
