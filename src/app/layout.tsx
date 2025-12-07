@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
+  subsets: ["latin", "latin-ext", "cyrillic", "greek", "vietnamese"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,13 +32,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSans.variable} antialiased`}
       >
         {/* 🔁 Video Background */}
         <video id="background-video" autoPlay muted loop playsInline>
           <source src="/videos/blackholewallpaper.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div
+          className="pointer-events-none fixed inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/85"
+          aria-hidden="true"
+        />
 
         {/* Main Content */}
         {children}

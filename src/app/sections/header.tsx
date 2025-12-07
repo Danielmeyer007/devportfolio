@@ -7,16 +7,16 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="py-4 border-b border-white/15 md:border-none">
+    <header className="py-5">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto">
+        <div className="flex justify-between items-center border border-white/10 bg-black/50 backdrop-blur-xl p-3 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.45)] max-w-5xl mx-auto">
           {/* Left: Logo as Clickable Button */}
           <div className="flex items-center gap-4">
             <div className="relative w-10 h-10 md:w-14 md:h-14">
               {/* Logo wrapped in Link component to make it clickable */}
               <Link
                 href="/" // Direct to the homepage
-                className="w-full h-full rounded-full bg-black flex items-center justify-center shadow-[0_0_30px_rgba(100,100,255,0.8)] cursor-pointer" // Added cursor-pointer to make it appear clickable
+                className="w-full h-full rounded-full bg-black flex items-center justify-center shadow-[0_0_30px_rgba(100,100,255,0.5)] cursor-pointer"
                 aria-label="Go to Homepage" // Accessibility feature
               >
                 <span className="text-white font-bold text-xs md:text-base">
@@ -30,8 +30,8 @@ const Header: React.FC = () => {
 
           {/* Center: Navigation Menu */}
           <div className="hidden md:flex flex-1 justify-center">
-            <nav>
-              <ul className="flex gap-8 text-sm justify-center">
+            <nav aria-label="Primary">
+              <ul className="flex gap-8 text-xs tracking-[0.16em] uppercase justify-center text-white/70">
                 <li>
                   <Link
                     href="/about"
@@ -113,6 +113,8 @@ const Header: React.FC = () => {
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="text-white focus:outline-none"
                 aria-label="Toggle mobile menu"
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -135,9 +137,9 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {menuOpen && (
-          <div className="md:hidden mt-4">
-            <nav>
-              <ul className="flex flex-col gap-4 text-white">
+          <div className="md:hidden mt-3" id="mobile-menu">
+            <nav aria-label="Mobile primary">
+              <ul className="flex flex-col gap-3 text-white bg-black/80 border border-white/10 rounded-2xl p-4">
                 <li>
                   <Link
                     href="/about"
